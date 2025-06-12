@@ -1,0 +1,147 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  --primary-color: #1a1a1a;
+  --secondary-color: #2d4b6e;
+  --accent-color: #f8f5e8;
+  --border-color: #e89d33;
+  --text-light: #f8f5e8;
+  --text-dark: #1a1a1a;
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: rgba(33, 34, 36, 1);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  font-family: 'Montserrat', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.2;
+}
+
+.btn-primary {
+  background-color: #0e4b6b;
+  border-color: #0e4b6b;
+  transition: all 0.3s ease;
+}
+.btn-primary:hover {
+  background-color: #0a3a54;
+  border-color: #0a3a54;
+  transform: translateY(-2px);
+}
+
+.company-blue {
+  color: #0e4b6b;
+}
+.company-bg-blue {
+  background-color: rgba(63, 100, 155, 1);
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+}
+
+/* Waves */
+.bg-wave {
+  position: relative;
+  overflow: hidden;
+}
+.wave {
+  position: absolute;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+}
+.wave-1 {
+  top: 50px;
+  left: -100px;
+  width: 300px;
+  height: 300px;
+  background-color: var(--secondary-color);
+  border-radius: 40%;
+}
+.wave-2 {
+  bottom: -50px;
+  right: -100px;
+  width: 350px;
+  height: 350px;
+  background-color: var(--secondary-color);
+  border-radius: 40%;
+}
+.content {
+  position: relative;
+  z-index: 1;
+}
+
+/* Servicios */
+.service-card {
+  background-color: transparent;
+  border: 2px solid var(--border-color);
+  border-radius: 15px;
+  margin-bottom: 20px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+.service-item {
+  margin-bottom: 10px;
+  padding-left: 10px;
+  border-left: 2px solid var(--border-color);
+}
+
+/* Tagline y divider */
+.tagline {
+  font-weight: 700;
+  letter-spacing: 1px;
+  padding: 30px 0;
+  text-align: center;
+  
+}
+.divider {
+  height: 2px;
+  background-color: var(--border-color);
+  margin: 15px 0;
+  width: 100%;
+}
+
+/* Icono de servicio (maletín) */
+/* Si usas FontAwesome, por ejemplo: */
+.icon-service::before {
+  font-family: 'Font Awesome 5 Free';
+  content: '\f0b1'; /* Unicode de maletín */
+  font-weight: 900;
+  margin-right: 10px;
+  color: var(--border-color);
+  font-size: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .logo-text {
+    font-size: 1.8rem;
+  }
+  .logo-subtitle {
+    font-size: 0.7rem;
+  }
+  .service-card {
+    margin-bottom: 15px;
+  }
+}
