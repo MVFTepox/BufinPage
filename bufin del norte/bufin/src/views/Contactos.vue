@@ -1,7 +1,7 @@
 <script setup>
 import { ref } from 'vue'
-import Navbar from './Navbar.vue'
-import Footer from './Footer.vue'
+import Navbar from '../components/Navbar.vue'
+import Footer from '../components/Footer.vue'
 
 const formData = ref({
   name: '',

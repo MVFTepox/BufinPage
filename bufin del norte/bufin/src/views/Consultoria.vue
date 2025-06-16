@@ -1,6 +1,12 @@
 <script setup>
-import Navbar from './Navbar.vue';
-import Footer from './Footer.vue';
+import Navbar from '../components/Navbar.vue';
+import Footer from '../components/Footer.vue';
+
+// Importar imágenes
+import consultingOffer from '../assets/consulting-offer.jpg';
+import howWeWork from '../assets/how-we-work.jpg';
+import targetClient from '../assets/target-client.jpg';
+import whyChooseUs from '../assets/why-choose-us.jpg';
 </script>
 
 <template>
@@ -14,6 +20,7 @@ import Footer from './Footer.vue';
         <div class="bubble">¿Qué ofrecemos?</div>
         <div class="line"></div>
         <div class="content-block">
+          <img :src="consultingOffer" alt="Consultoría empresarial" class="content-image" />
           <p>Ofrecemos consultoría estratégica en comercio exterior, enfocada en brindar soluciones personalizadas y efectivas para cada cliente.</p>
           <i class="bi bi-briefcase-fill icon"></i>
         </div>
@@ -24,6 +31,7 @@ import Footer from './Footer.vue';
         <div class="bubble">¿Cómo trabajamos?</div>
         <div class="line"></div>
         <div class="content-block">
+          <img :src="howWeWork" alt="Cómo trabajamos" class="content-image" />
           <p>Realizamos un diagnóstico detallado, identificamos oportunidades de mejora y acompañamos al cliente en todo el proceso de implementación.</p>
           <i class="bi bi-gear-fill icon"></i>
         </div>
@@ -34,6 +42,7 @@ import Footer from './Footer.vue';
         <div class="bubble">¿A quién va dirigido?</div>
         <div class="line"></div>
         <div class="content-block">
+          <img :src="targetClient" alt="A quién va dirigido" class="content-image" />
           <p>Nuestra consultoría está orientada a empresas que buscan optimizar sus operaciones y cumplir con la normativa aduanera vigente.</p>
           <i class="bi bi-people-fill icon"></i>
         </div>
@@ -43,7 +52,8 @@ import Footer from './Footer.vue';
       <div class="timeline-item right">
         <div class="bubble">¿Por qué elegirnos?</div>
         <div class="line"></div>
-        <div class="content-block fade-in">
+        <div class="content-block">
+          <img :src="whyChooseUs" alt="Por qué elegirnos" class="content-image" />
           <p>Contamos con más de 20 años de experiencia, un equipo experto y soluciones efectivas que garantizan resultados.</p>
           <i class="bi bi-award-fill icon"></i>
         </div>
@@ -61,7 +71,6 @@ import Footer from './Footer.vue';
 </template>
 
 <style scoped>
-/* CONTENEDOR GENERAL */
 .timeline-container {
   background-color: #0e0e0e;
   color: white;
@@ -69,7 +78,6 @@ import Footer from './Footer.vue';
   font-family: 'Arial', sans-serif;
 }
 
-/* TÍTULO */
 .title {
   text-align: center;
   font-size: 2.8rem;
@@ -78,7 +86,6 @@ import Footer from './Footer.vue';
   color: #fdfdfd;
 }
 
-/* TIMELINE GENERAL */
 .timeline {
   display: flex;
   flex-direction: column;
@@ -88,7 +95,6 @@ import Footer from './Footer.vue';
   margin: 0 auto;
 }
 
-/* BLOQUES */
 .timeline-item {
   display: flex;
   align-items: center;
@@ -99,23 +105,26 @@ import Footer from './Footer.vue';
 .timeline-item.left {
   flex-direction: row;
 }
+
 .timeline-item.right {
   flex-direction: row-reverse;
 }
 
-/* BURBUJAS COLORIDAS */
 .timeline-item:nth-child(1) .bubble {
   background: #ffe8b0;
   color: #2c1b00;
 }
+
 .timeline-item:nth-child(2) .bubble {
   background: #d0f0ff;
   color: #002c33;
 }
+
 .timeline-item:nth-child(3) .bubble {
   background: #d2ffc9;
   color: #002b11;
 }
+
 .timeline-item:nth-child(4) .bubble {
   background: #ffd0ec;
   color: #3d002b;
@@ -133,7 +142,6 @@ import Footer from './Footer.vue';
   z-index: 2;
 }
 
-/* LINEA ENTRE BURBUJA Y BLOQUE */
 .line {
   flex-shrink: 0;
   width: 40px;
@@ -142,7 +150,6 @@ import Footer from './Footer.vue';
   z-index: 1;
 }
 
-/* BLOQUES CON GRADIENTE Y SOMBRA SUAVE */
 .content-block {
   background: linear-gradient(145deg, #1a1a1a, #252525);
   color: #f1f1f1;
@@ -152,30 +159,24 @@ import Footer from './Footer.vue';
   box-shadow: 0 10px 18px rgba(0, 0, 0, 0.5);
   font-size: 1rem;
   animation: fadeInUp 1s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
-/* ÍCONOS COLORIDOS */
-.timeline-item:nth-child(1) .icon {
-  color: #f4c542;
-}
-.timeline-item:nth-child(2) .icon {
-  color: #4ac9ff;
-}
-.timeline-item:nth-child(3) .icon {
-  color: #56e173;
-}
-.timeline-item:nth-child(4) .icon {
-  color: #ff7abe;
-}
-
-.icon {
-  display: block;
+.content-block .icon {
   font-size: 2.5rem;
-  margin-top: 1rem;
   text-align: center;
 }
 
-/* LÍNEA CENTRAL */
+.content-image {
+  width: 100%;
+  height: auto;
+  border-radius: 1rem;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
 .timeline::before {
   content: '';
   position: absolute;
@@ -188,7 +189,6 @@ import Footer from './Footer.vue';
   z-index: 0;
 }
 
-/* ÚLTIMA EXTENSIÓN */
 .timeline-line-extension {
   width: 2px;
   height: 0.5px;
@@ -196,7 +196,6 @@ import Footer from './Footer.vue';
   margin: -2rem auto 2rem auto;
 }
 
-/* CTA FINAL */
 .call-to-action {
   text-align: center;
 }
@@ -222,7 +221,6 @@ import Footer from './Footer.vue';
   transform: translateY(-3px);
 }
 
-/* RESPONSIVE */
 @media (max-width: 768px) {
   .timeline-item {
     flex-direction: column !important;
@@ -250,7 +248,6 @@ import Footer from './Footer.vue';
   }
 }
 
-/* ANIMACIÓN */
 @keyframes fadeInUp {
   0% {
     opacity: 0;
@@ -261,5 +258,4 @@ import Footer from './Footer.vue';
     transform: translateY(0);
   }
 }
-
 </style>

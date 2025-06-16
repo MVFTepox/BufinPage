@@ -1,9 +1,11 @@
 <script setup lang="ts">
+import Navbar from '../components/Navbar.vue';
+import Footer from '../components/Footer.vue';
+
+
 const downloadApp = () => {
   window.open('https://bufinorte.com/LeyAduanera/', '_blank', 'noopener');
 };
-import Navbar from './Navbar.vue';
-import Footer from './Footer.vue';
 </script>
 
 <template>

@@ -1,6 +1,13 @@
 <script setup>
-import Navbar from './Navbar.vue';
-import Footer from './Footer.vue';
+import Navbar from '../components/Navbar.vue';
+import Footer from '../components/Footer.vue';
+
+import bullseye from '../assets/bullseye.png';
+import businessTeam from '../assets/business-team.jpg';
+import decisionMaking from '../assets/decision-making.jpeg';
+import mapWithPins from '../assets/map-with-pins.jpg';
+import thinking from '../assets/thinking.jpg';
+import vision from '../assets/vision.jpg';
 </script>
 
 <template>
@@ -14,6 +21,7 @@ import Footer from './Footer.vue';
         <div class="bubble">¿A qué nos dedicamos?</div>
         <div class="line"></div>
         <div class="content-block">
+          <img :src="businessTeam" alt="Equipo de trabajo" class="timeline-img" />
           <p>Desarrollar servicios integrales conformados por empresas líderes en su actividad.</p>
           <i class="bi bi-building-fill icon"></i>
         </div>
@@ -23,6 +31,7 @@ import Footer from './Footer.vue';
         <div class="bubble">¿Qué logramos?</div>
         <div class="line"></div>
         <div class="content-block">
+          <img :src="bullseye" alt="Logro diana" class="timeline-img" />
           <p>Logramos un concepto único en la cadena de logística, brindando soluciones integrales.</p>
           <p>Con más de 20 años de experiencia.</p>
           <i class="bi bi-bullseye icon"></i>
@@ -33,6 +42,7 @@ import Footer from './Footer.vue';
         <div class="bubble">¿Qué generamos?</div>
         <div class="line"></div>
         <div class="content-block">
+          <img :src="decisionMaking" alt="Toma de decisiones" class="timeline-img" />
           <p>Generamos ventajas competitivas para nuestros clientes, permitiendo una mejor toma de decisiones en comercio exterior.</p>
           <i class="bi bi-gear-fill icon"></i>
         </div>
@@ -42,6 +52,7 @@ import Footer from './Footer.vue';
         <div class="bubble">¿En dónde?</div>
         <div class="line"></div>
         <div class="content-block">
+          <img :src="mapWithPins" alt="Mapa con pines" class="timeline-img" />
           <p>Presencia nacional e internacional, operando estratégicamente en los principales puertos y aduanas del país.</p>
           <i class="bi bi-geo-alt-fill icon"></i>
         </div>
@@ -51,6 +62,7 @@ import Footer from './Footer.vue';
         <div class="bubble">Nuestra Misión</div>
         <div class="line"></div>
         <div class="content-block">
+          <img :src="thinking" alt="Persona con idea" class="timeline-img" />
           <p>Brindar servicios de comercio exterior con excelencia, integridad y compromiso, generando valor mediante soluciones efectivas e innovadoras.</p>
           <i class="bi bi-lightbulb-fill icon"></i>
         </div>
@@ -60,6 +72,7 @@ import Footer from './Footer.vue';
         <div class="bubble">Nuestra Visión</div>
         <div class="line"></div>
         <div class="content-block">
+          <img :src="vision" alt="Camino al ocaso" class="timeline-img" />
           <p>Ser la consultora líder en comercio exterior en México, reconocida por nuestra calidad, experiencia y cobertura estratégica.</p>
           <i class="bi bi-eye-fill icon"></i>
         </div>
@@ -161,6 +174,23 @@ import Footer from './Footer.vue';
   margin-top: 1rem;
   color: #1f3b73;
   text-align: center;
+}
+
+/* Estilo mejorado para imágenes */
+.timeline-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 1.25rem;
+  margin-bottom: 1rem;
+  border: 2px solid #d6e1f2;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timeline-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
 }
 
 /* Responsive */

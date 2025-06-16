@@ -1,13 +1,13 @@
 // src/router/index.js
 import { createRouter, createWebHistory } from 'vue-router'
 
-import Sobre from '../components/Sobre.vue'
+import Sobre from '../views/Sobre.vue'
 import HomeView from '../views/Pagina.vue'
-import Programa from '../components/Programa.vue'
+import Programa from '../views/Programa.vue'
 import Servicios from '../components/Servicios.vue'
-import Contactos from '../components/Contactos.vue'
-import Consultoria from '../components/Consultoria.vue'
-import Auditoria from '../components/Auditoria.vue'
+import Contactos from '../views/Contactos.vue'
+import Consultoria from '../views/Consultoria.vue'
+import Auditoria from '../views/Auditoria.vue'
 const routes = [
   {
     path: '/',
