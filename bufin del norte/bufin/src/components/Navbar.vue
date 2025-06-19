@@ -28,7 +28,8 @@ const navItems = [
   { name: "Consultoría", link: "/consultoria" },
   { name: "Auditoria", link: "/auditoria" },
   { name: "Contactos", link: "/contactos" },
-  { name: "Programa", link: "/programa" }
+  { name: "Programa", link: "/programa" },
+  { name: "Axo Web", link: "/promoaxo" },
 ]
 </script>
 

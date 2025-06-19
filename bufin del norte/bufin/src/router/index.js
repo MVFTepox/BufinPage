@@ -8,6 +8,7 @@ import Servicios from '../components/Servicios.vue'
 import Contactos from '../views/Contactos.vue'
 import Consultoria from '../views/Consultoria.vue'
 import Auditoria from '../views/Auditoria.vue'
+import PromoAxo from '../views/PromoAxo.vue'
 const routes = [
   {
     path: '/',
@@ -44,6 +45,11 @@ const routes = [
     path: '/auditoria',
     name: 'Auditoria',
     component: Auditoria
+  },
+  {
+    path: '/promoaxo',
+    name: 'PromoAxo',
+    component: PromoAxo
   }
 ]
 
