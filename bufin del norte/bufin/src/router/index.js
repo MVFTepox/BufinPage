@@ -13,49 +13,69 @@ const routes = [
   {
     path: '/',
     name: 'home',
-    component: HomeView
+    component: HomeView,
+    meta: {
+      title: 'Bufin Del Norte - Consultores de Comercio Exterior'
+    }
   },
   {
     path: '/sobre',
     name: 'sobre',
-    component: Sobre
+    component: Sobre,
+    meta: {
+      title: 'Sobre Nosotros - Bufin Del Norte - Consultores de Comercio Exterior'
+    }
   },
   {
     path: '/programa',
     name: 'programa',
-    component: Programa
+    component: Programa,
+    meta: {
+      title: 'BinLey 25° - Bufin Del Norte  - Consultores de Comercio Exterior'
+    }
   },
-  {
-    path: '/servicios',
-    name: 'servicios',
-    component: Servicios
-  }
-  ,
+  
   {
     path: '/contactos',
     name: 'contactos',
-    component: Contactos
+    component: Contactos,
+    meta: {
+      title:'Contáctanos!📱  - Bufin Del Norte - Consultores de Comercio Exterior'
+    }
+
   },
   {
     path: '/consultoria',
     name: 'Consultoria',
-    component: Consultoria
+    component: Consultoria,
+    meta: {
+      title: 'Consultoría - Bufin Del Norte - Consultores de Comercio Exterior'
+    }
   },
   {
     path: '/auditoria',
     name: 'Auditoria',
-    component: Auditoria
+    component: Auditoria,
+    meta: {
+      title: 'Auditoría - Bufin Del Norte - Consultores de Comercio Exterior'
+    }
   },
   {
     path: '/promoaxo',
     name: 'PromoAxo',
-    component: PromoAxo
+    component: PromoAxo,
+    meta: {
+      title: 'Axo Web Digital - Tu negocio en la WEB  🛜🌐'
+    }
   }
 ]
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
-  routes
+  routes,
+   scrollBehavior(to, from, savedPosition) {
+    return { top: 0 }
+  }
 })
 
 export default router

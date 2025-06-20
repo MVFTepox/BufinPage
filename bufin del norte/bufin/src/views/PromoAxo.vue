@@ -8,7 +8,7 @@ import Footer from '../components/Footer.vue'
 
   <section class="hero-section">
     <div class="hero-content">
-      <h1>Axo Web</h1>
+      <h1>Axo Web Digital</h1>
       <p>Diseño estratégico, moderno y funcional para destacar tu presencia digital.</p>
       <a href="https://axo-web.netlify.app/" target="_blank" class="visit-button">Explorar sitio</a>
     </div>

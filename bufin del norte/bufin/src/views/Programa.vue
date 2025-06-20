@@ -51,7 +51,7 @@ const downloadApp = () => {
           📥 Descargar Ley Aduanera
         </a>
         <a href="https://bufinorte.com/LeyAduanera/" target="_blank" rel="noopener noreferrer" class="url-link">
-          🔗 Ver en el navegador
+          📖 Ver instrucciones del Instalacion de Ley Aduanera 
         </a>
       </div>
 

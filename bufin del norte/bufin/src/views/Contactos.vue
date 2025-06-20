@@ -2,6 +2,10 @@
 import { ref } from 'vue'
 import Navbar from '../components/Navbar.vue'
 import Footer from '../components/Footer.vue'
+import emailjs from 'emailjs-com'
+const PublicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+const ServiceID = import.meta.env.VITE_EMAILJS_SERVICE_ID
+const TemplateID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID
 
 const formData = ref({
   name: '',
@@ -9,7 +13,9 @@ const formData = ref({
   message: ''
 })
 
+
 const termsAccepted = ref(false)
+
 
 const submitForm = () => {
   if (!termsAccepted.value) {
@@ -22,16 +28,32 @@ const submitForm = () => {
     return
   }
 
-  console.log('Form submitted:', formData.value)
-  alert('Formulario enviado correctamente')
-
-  // Reset form
-  formData.value = {
-    name: '',
-    email: '',
-    message: ''
-  }
-  termsAccepted.value = false
+  
+  emailjs.send(
+    ServiceID,      
+    TemplateID, 
+    {
+      name: formData.value.name,
+      email: formData.value.email,
+      message: formData.value.message
+    },
+    PublicKey      
+  )
+  .then((response) => {
+    console.log('Correo enviado:', response.status, response.text)
+    alert('Formulario enviado correctamente')
+    // Resetear formulario
+    formData.value = {
+      name: '',
+      email: '',
+      message: ''
+    }
+    termsAccepted.value = false
+  })
+  .catch((error) => {
+    console.error('Error al enviar el formulario:', error)
+    alert('Hubo un error al enviar el formulario.')
+  })
 }
 </script>
 
