@@ -1,4 +1,4 @@
-<script setup>
+<script setup> 
 import Navbar from '../components/Navbar.vue'
 import Footer from '../components/Footer.vue'
 </script>
@@ -10,7 +10,7 @@ import Footer from '../components/Footer.vue'
     <div class="hero-content">
       <h1>Axo Web Digital</h1>
       <p>Diseño estratégico, moderno y funcional para destacar tu presencia digital.</p>
-      <a href="https://axo-web.netlify.app/" target="_blank" class="visit-button">Explorar sitio</a>
+      <button class="visit-button" disabled>Próximamente</button>
     </div>
   </section>
 
@@ -26,6 +26,10 @@ import Footer from '../components/Footer.vue'
     <div class="feature">
       <h2>Código Limpio</h2>
       <p>Desarrollado con buenas prácticas, alto rendimiento y escalabilidad.</p>
+    </div>
+    <div class="feature">
+      <h2>Marketing Digital</h2>
+      <p>Optimización estratégica para posicionar tu marca y atraer más clientes.</p>
     </div>
   </section>
 
@@ -64,12 +68,9 @@ import Footer from '../components/Footer.vue'
   padding: 0.75rem 2rem;
   border-radius: 50px;
   font-weight: 600;
-  text-decoration: none;
-  transition: 0.3s ease;
-}
-
-.visit-button:hover {
-  background-color: #e2a620;
+  border: none;
+  cursor: default;
+  opacity: 0.8;
 }
 
 .features {
